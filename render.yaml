@@ -1,10 +1,12 @@
+
 services:
-  - type: worker
+  - type: web
     name: dvary-bot
     env: node
     plan: free
     buildCommand: npm install
     startCommand: node index.js
+    healthCheckPath: /
     envVars:
       - key: BOT_TOKEN
         value: 8665803785:AAEB0ZUnFH4AiWyd7PtKiwyoGA50-ml0R84
